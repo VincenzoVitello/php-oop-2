@@ -6,8 +6,8 @@ require_once __DIR__."/Room.php";
 class Room4d extends Room{
    public $augmentedEffects;
 
-public function __construct($_augmentedEffects, $_roomID ,$_seats, $_screen){ 
-   parent:: __construct($_roomID ,$_seats, $_screen);
+public function __construct($_augmentedEffects, $_roomID ,$_seats, $_screen, $_screenResolution){ 
+   parent:: __construct($_roomID ,$_seats, $_screen, $_screenResolution);
    $this -> augmentedEffects = $_augmentedEffects;
    }
 }
