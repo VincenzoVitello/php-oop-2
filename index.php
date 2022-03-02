@@ -119,10 +119,10 @@ $actorsArray = [
 <!-- Inizio Milestone 3 -->
 <div class="milestone">
         <?php
-            function getNumberOfShows(){
+            function getNumberOfShows($showsArray, $filmsArray){
                foreach($showsArray as $show){
-                   if($show->film = $filmsArray[0]->title && $show->date = '2022-2-3'){
-                       echo $show->hour;
+                   if($show->film == $filmsArray[0]->getFilmTitle() && $show->date == '2022-2-3'){
+                       echo '<li> 2022-2-3, spettacolo delle ore:'.$show->hour.'</li>';
                    }
                }
             } //chiusura getNumberOfShows()
@@ -131,7 +131,7 @@ $actorsArray = [
         <h1>Milestone 3:</h1>
         <p>Proiezioni di Tutti pazzi per la gnugna:
             <?php 
-               getNumberOfShows()
+               getNumberOfShows($showsArray, $filmsArray);
             ?>
         </p>
     </div>
