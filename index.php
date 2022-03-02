@@ -44,13 +44,12 @@ $filmsArray = [
 
 // array relativo agli spettacoli, il construct si aspetta un titolo, una data, un orario e un id relativo alla sala
 $showsArray = [
-    new Show ('ciolla', '2022-1-30', '18:40', 'dura'),
-    new Show ($filmsArray[0]->getFilmTitle(), '2022-2-1', '21:00', $roomsArray[1]->roomID),
-    new Show ($filmsArray[0]->getFilmTitle(), '2022-2-3', '19:40', $roomsArray[2]->roomID),
-    new Show ($filmsArray[0]->getFilmTitle(), '2022-2-3', '18:40', $roomsArray[1]->roomID),
-    new Show ($filmsArray[0]->getFilmTitle(), '2022-2-3', '21:00', $roomsArray[3]->roomID),
-    new Show ($filmsArray[3]->getFilmTitle(), '2022-2-4', '22:40', $room4D->roomID),
-    new Show ($filmsArray[2]->getFilmTitle(), '2022-2-4', '22:40', $roomsArray[1]->roomID),
+    new Show ($filmsArray[0]->getFilmTitle(), '2022-02-01', '21:00', $roomsArray[1]->roomID),
+    new Show ($filmsArray[0]->getFilmTitle(), '2022-02-03', '19:40', $roomsArray[2]->roomID),
+    new Show ($filmsArray[0]->getFilmTitle(), '2022-02-03', '18:40', $roomsArray[1]->roomID),
+    new Show ($filmsArray[0]->getFilmTitle(), '2022-02-03', '21:00', $roomsArray[3]->roomID),
+    new Show ($filmsArray[3]->getFilmTitle(), '2022-02-04', '22:40', $room4D->roomID),
+    new Show ($filmsArray[2]->getFilmTitle(), '2022-02-04', '22:40', $roomsArray[1]->roomID),
 ];
 
 //array relativo agli attori, il construct si aspetta nome e cognome, anno di nascita
@@ -121,15 +120,15 @@ $actorsArray = [
         <?php
             function getNumberOfShows($showsArray, $filmsArray){
                foreach($showsArray as $show){
-                   if($show->film == $filmsArray[0]->getFilmTitle() && $show->date == '2022-2-3'){
-                       echo '<li> 2022-2-3, spettacolo delle ore:'.$show->hour.'</li>';
+                   if($show->film == $filmsArray[0]->getFilmTitle() && $show->date == '2022-02-03'){
+                       echo '<li> Proiezione delle ore: '.$show->hour.'</li>';
                    }
                }
             } //chiusura getNumberOfShows()
             
         ?>
         <h1>Milestone 3:</h1>
-        <p>Proiezioni di Tutti pazzi per la gnugna:
+        <p>Proiezioni di <strong> Tutti pazzi per la gnugna </strong> di Giovedì 3 Febbraio 2022:
             <?php 
                getNumberOfShows($showsArray, $filmsArray);
             ?>
